@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <section id="login-section" class="centered-section">
+            <h1>🔒 Login Required</h1>
+            <p>Security Question: When was our first date? (DD.MM.YYYY)</p>
+            
+            <input type="text" id="password-input" placeholder="e.g. 09.11.2002">
+            <button onclick="checkPassword()">Unlock My Heart</button>
+            <p id="login-error" class="error-text hidden">Incorrect! Figure it out or forget the gifts 😤</p>
+        </section>
+        <div id="proposal-section">
+            <h1 id="proposal-text">Will you be my Valentine? 🌹</h1>
+            <p id="proposal-subtext">I have prepared a few surprises for you...</p>
+            <div class="buttons">
+                <button class="btn-yes" onclick="handleYes()">YES!</button>
+                <button class="btn-no" onclick="handleNo()">No...</button>
+            </div>
+        </div>
+
+        <div id="gift-hub-section" class="hidden">
+            <h1>Choose a Gift 🎁</h1>
+            <p>Open them in any order you like.</p>
+            
+            <div class="gift-grid">
+                <div class="gift-box" onclick="openSection('quiz')">
+                    <div class="gift-icon">❓</div>
+                    <h3>The Challenge</h3>
+                </div>
+
+                <div class="gift-box" onclick="openSection('music')">
+                    <div class="gift-icon">🎶</div>
+                    <h3>The Vibe</h3>
+                </div>
+
+                <div class="gift-box" onclick="openSection('letter')">
+                    <div class="gift-icon">💌</div>
+                    <h3>The Truth</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="quiz-section" class="hidden">
+            <button class="btn-back" onclick="backToHub()">← Back</button>
+            
+            <div id="progress-box">
+                <div class="progress-bg">
+                    <div id="progress-bar" class="progress-fill"></div>
+                </div>
+                <p id="progress-text">Question 1</p>
+            </div>
+
+            <h2 id="question-text">Question goes here...</h2>
+            <p id="hint-text" class="hint"></p>
+            
+            <input type="text" id="answer-input" placeholder="Type your answer...">
+            <button class="btn-submit" onclick="checkAnswer()">Submit</button>
+            <p id="error-message" class="error hidden">Wrong answer! Try again.</p>
+        </div>
+
+        <div id="success-section" class="hidden">
+            <h1>Correct! 🎉</h1>
+            <p id="success-comment">You know me so well.</p>
+            <button class="btn-yes" onclick="loadNextQuestion()">Next Question ➡️</button>
+        </div>
+
+        <div id="quiz-complete-section" class="hidden">
+            <h1>You Won! 🏆</h1>
+            <p>You answered everything correctly. That's like my babygirl.</p>
+            <button class="btn-yes" onclick="backToHub()">Back to Gifts 🎁</button>
+        </div>
+
+        <div id="music-section" class="hidden">
+            <button class="btn-back" onclick="backToHub()">← Back</button>
+            <h1>Our Playlist 🎶</h1>
+            <p>Songs that remind me of you.</p>
+            
+            <div class="song-grid">
+    <div class="song-item">
+        <img src="https://raw.githubusercontent.com/null-repo/misc/main/img1.jpeg" alt="Song 1" class="song-img">
+        <a href="https://www.youtube.com/watch?v=y7MW7d8fb1Y&list=RDy7MW7d8fb1Y&start_radio=1" target="_blank" class="song-link">Maiyya Mainu</a>
+    </div>
+
+    <div class="song-item">
+        <img src="https://raw.githubusercontent.com/null-repo/misc/main/img2.jpeg" alt="Song 2" class="song-img">
+        <a href="https://www.youtube.com/watch?v=hHuG7FIKgtc&list=RDhHuG7FIKgtc&start_radio=1" target="_blank" class="song-link">Ishq</a>
+    </div>
+
+    <div class="song-item">
+        <img src="https://raw.githubusercontent.com/null-repo/misc/main/img3.jpeg" alt="Song 3" class="song-img">
+        <a href="https://www.youtube.com/watch?v=LV_wiOhO40Q&list=RDLV_wiOhO40Q&start_radio=1" target="_blank" class="song-link">Dooron Dooron</a>
+    </div>
+
+    <div class="song-item">
+        <img src="https://raw.githubusercontent.com/null-repo/misc/main/img4.jpeg" alt="Song 4" class="song-img">
+        <a href="https://www.youtube.com/watch?v=XvUSsh3gdO4&list=RDXvUSsh3gdO4&start_radio=1" target="_blank" class="song-link">Mere bina</a>
+    </div>
+</div> 
+        </div>
+
+        <div id="letter-section" class="hidden">
+            <button class="btn-back" onclick="backToHub()">← Back</button>
+            <h1>My Valentine ❤️</h1>
+            
+            <div class="letter-paper">
+                <p><strong>Dear Love,</strong></p>
+                <p>
+                    I wanted to create something special for you because words sometimes fall short.
+                    I don't know our future; I might not always give you the kind of love you want, and I might not be the one for you, but that can never invalidate my love for you.
+                    Thank you for being my partner, my best friend, and my safe place (you will always be).
+                </p>
+                <p>
+                    Every moment with you is my favorite memory, even the silly fights that you find annoying. I love you more than code can express.
+                </p>
+                <p class="signature">- Always Yours, Sanchita</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
